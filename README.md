@@ -9,8 +9,4 @@ Number of team members: 5
 
 Group Members:
 
-Shanjana Pulagala (Team Leader)
-Virri Anusha
-Palam Bindu Bhargavi
-Riya Rajesh
-Dasari Charan Sai
+Shanjana Pulagala (Team Leader), Virri Anusha, Palam Bindu Bhargavi, Riya Rajesh, Dasari Charan Sai
