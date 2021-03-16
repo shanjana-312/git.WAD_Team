@@ -4,7 +4,7 @@ const Formsuccess = () => {
 
         <div className="form-content-right">
             <div className="form-success">
-                We have received your request!!
+                You have successfully signed up!!
         </div>
             {/* <img src="img/img-form-2.png" alt="success-image" className="form-img-2" /> */}
         </div>
