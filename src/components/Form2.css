@@ -1,14 +1,14 @@
-.form-container {
+.form2-container {
     margin: 40px auto;
     width: 600px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     position: relative;
     border-radius: 10px;
-    height: 800px;
+    height: 500px;
     display: grid;
   }
 
-  .form-container .close-btn {
+  .form2-container .close2-btn {
     position: absolute;
     top: 2%;
     right: 3%;
@@ -17,15 +17,7 @@
     color: rgb(255, 255, 255);
     cursor: pointer;
   }
-  .form-img-2 {
-    width: 60%;
-    height: 60%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
+  
   .form-success {
     text-align: center;
     font-size: 24px;
@@ -33,13 +25,13 @@
     color: #fff;
   }
 
-  .form-content-right {
+  .form2-content-right {
     border-radius: 10px;
     position: relative;
     background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(17, 17, 17) 100%);
   }
 
-  .form-content-right > .formlogin  {
+  .form2-content-right > .formlogin  {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,7 +44,7 @@
     align-items: center;
   }
 
-  .form-content-right > .formlogin> h1 {
+  .form2-content-right > .formlogin> h1 {
     font-size: 1rem;
     text-align: start;
     width: 80%;
@@ -60,25 +52,25 @@
     color: #fff;
   }
 
-  .form-inputs {
+  .form2-inputs {
     margin-bottom: 0.0px;
     width: 80%;
   }
 
-  .form-content-right  .formlogin  .form-inputs  p {
+  .form2-content-right  .formlogin  .form2-inputs  p {
     font-size: 0.8rem;
     margin-top: 0.3rem;
     color: #f00e0e;
   }
 
-  .form-content-right .formlogin .form-inputs .form-label {
+  .form2-content-right .formlogin .form2-inputs .form2-label {
     display: inline-block;
     font-size: 0.8rem;
     margin-bottom: 5px;
     color: #fff;
   }
 
-  .form-content-right > .formlogin>.form-inputs >.form-input {
+  .form2-content-right > .formlogin>.form2-inputs >.form2-input {
     display: block;
     padding-left: 10px;
     outline: none;
@@ -89,12 +81,12 @@
     border: none;
   }
 
-  .form-content-right > .formlogin>.form-inputs > .form-input::placeholder {
+  .form2-content-right > .formlogin>.form2-inputs > .form2-input::placeholder {
     color: #595959;
     font-size: 12px;
   }
 
-  .form-content-right > .formlogin>.form-input-btn {
+  .form2-content-right > .formlogin>.form2-input-btn {
     width: 80%;
     height: 50px;
     margin-top: 50px;
@@ -110,7 +102,7 @@
     font-size: 1rem;
   }
 
-  .form-content-right > .formlogin > .form-input-btn:hover {
+  .form2-content-right > .formlogin > .form2-input-btn:hover {
     cursor: pointer;
     background: linear-gradient(
       90deg,
@@ -120,7 +112,7 @@
     transition: all 0.4s ease-out;
   }
 
-  .form-content-right > .formlogin> .form-input-Signup {
+  .form2-content-right > .formlogin> .form2-input-Signup {
     font-size: 0.8rem;
     margin-top: 8px;
     color: #fff;
@@ -128,7 +120,7 @@
     text-align: center;
   }
 
-  .form-content-right > .formlogin> .form-input-Signup >a {
+  .form2-content-right > .formlogin> .form2-input-Signup >a {
     text-decoration: none;
     color: #27cdff;
     font-weight: 600;

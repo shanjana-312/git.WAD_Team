@@ -9,8 +9,8 @@ function Form2() {
     }
     return (
         <>
-            <div className="form-container">
-                <span className="close-btn">
+            <div className="form2-container">
+                <span className="close2-btn">
                     x
                 </span>
                 {!isSubmitted ? <FormLogin submitform={submitform} /> : <Formsuccess />}
