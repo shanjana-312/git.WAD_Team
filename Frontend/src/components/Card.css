@@ -1,5 +1,6 @@
 .cards {
-    padding: 2rem;
+    padding-top: 124px;
+    padding-bottom: 124px;
     background: #fff;
   }
   
@@ -61,7 +62,6 @@
     font-size: 12px;
     font-weight: 700;
     color: #fff;
-    background-color: #1f98f4;
     box-sizing: border-box;
   }
   

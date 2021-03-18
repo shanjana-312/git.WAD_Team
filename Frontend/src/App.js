@@ -10,7 +10,7 @@ import Posts from './components/pages/Posts';
 import Upload from './components/pages/Upload';
 import FindJobs from './components/pages/FindJobs';
 import Funds from './components/pages/Funds';
-
+import Footer from './components/Footer';
 function App() {
   return (
     <>
@@ -18,7 +18,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/About" component={About} />
+          <Route path="/about" component={About} />
           <Route path="/sign-up" component={SignUp} />
           <Route path="/login" component={login} />
           <Route path="/posts" component={Posts} />
@@ -27,6 +27,7 @@ function App() {
           <Route path="/funds" component={Funds} />
 
         </Switch>
+        <Footer />
       </Router>
     </>
   );

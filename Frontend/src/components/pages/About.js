@@ -1,7 +1,8 @@
 import React from 'react'
-import '../../App.css'
+import Footer from '../Footer';
 export default function About() {
-    return <div className="About">
+    return (<div className="about">
         ABOUT
-    </div>;
+    </div>
+    );
 }
