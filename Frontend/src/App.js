@@ -10,7 +10,6 @@ import Posts from './components/pages/Posts';
 import Upload from './components/pages/Upload';
 import FindJobs from './components/pages/FindJobs';
 import Funds from './components/pages/Funds';
-import Footer from './components/Footer';
 
 function App() {
   return (
@@ -26,9 +25,8 @@ function App() {
           <Route path="/upload" component={Upload} />
           <Route path="/findjobs" component={FindJobs} />
           <Route path="/funds" component={Funds} />
-         
+
         </Switch>
-        <Footer/>
       </Router>
     </>
   );
