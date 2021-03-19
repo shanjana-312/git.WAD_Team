@@ -4,26 +4,44 @@ import { Button3 } from './Button3';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
+import Dropdown2 from './Dropdown2';
 function Navbar() {
     const [click, setClick] = useState(false);
-    const [dropdown, setDropdown] = useState(false);
+    const [dropdown1, setDropdown1] = useState(false);
+    const [dropdown2, setDropdown2] = useState(false);
     const [input, setInput] = useState('');
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
     const onMouseEnter = () => {
         if (window.innerWidth < 960) {
-            setDropdown(false);
+            setDropdown1(false);
         } else {
-            setDropdown(true);
+            setDropdown1(true);
         }
     };
 
     const onMouseLeave = () => {
         if (window.innerWidth < 960) {
-            setDropdown(false);
+            setDropdown1(false);
         } else {
-            setDropdown(false);
+            setDropdown1(false);
+        }
+    };
+
+    const onMouseEnter1 = () => {
+        if (window.innerWidth < 960) {
+            setDropdown2(false);
+        } else {
+            setDropdown2(true);
+        }
+    };
+
+    const onMouseLeave1 = () => {
+        if (window.innerWidth < 960) {
+            setDropdown2(false);
+        } else {
+            setDropdown2(false);
         }
     };
 
@@ -58,21 +76,23 @@ function Navbar() {
                         onMouseLeave={onMouseLeave}
                     >
                         <Link
-                            to='/products'
                             className='nav-links'
                             onClick={closeMobileMenu}
                         >
                             <i class="far fa-window-restore"></i> Browse<i className='fas fa-caret-down' />
-                        </Link> {dropdown && <Dropdown />}
+                        </Link> {dropdown1 && <Dropdown />}
                     </li>
-                    <li className='nav-item'>
+                    <li className='nav-item'
+                        onMouseEnter={onMouseEnter1}
+                        onMouseLeave={onMouseLeave1}
+                    >
                         <Link
-                            to='/contact-us'
+                            to='/'
                             className='nav-links'
                             onClick={closeMobileMenu}
                         >
-                            <i class="fas fa-question"></i>Support
-                        </Link>
+                            <i class="fas fa-question"></i>Support<i className='fas fa-caret-down' />
+                        </Link>{dropdown2 && <Dropdown2 />}
                     </li>
                     <li>
                         <Link

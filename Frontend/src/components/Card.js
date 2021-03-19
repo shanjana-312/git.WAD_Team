@@ -4,6 +4,7 @@ import CardItem from './CardItem';
 import Img1 from '../img/img1.jpg';
 import Img2 from '../img/img2.png';
 import Img3 from '../img/img5.png'
+import flowchart from '../img/flowchart.jpeg';
 function Cards() {
     return (
         <div className='cards'>
@@ -25,6 +26,11 @@ function Cards() {
                             text='Browse Jobs'
                             path='/FindJobs'
                         />
+                        {/* <img
+                        className='flowchart'
+                        alt='Startup'
+                        src={flowchart}
+                    /> */}
                     </div>
                 </div>
             </div>
