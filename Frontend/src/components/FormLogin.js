@@ -3,6 +3,7 @@ import useForm from './useForm'
 import Validate from './Validateinfo'
 import './Form2.js'
 import { Link } from "react-router-dom"
+import Home from './pages/Home'
 function FormLogin({ submitform }) {
     const { handleChange, values, handleSubmit, errors } = useForm(submitform, Validate);
     return (
@@ -41,7 +42,7 @@ function FormLogin({ submitform }) {
 
                 <button className="form2-input-btn" type="login">Login</button>
                 <span className="form2-input-Signup">
-                    No account? Dont worry, Create one 😉! <Link to="/sign-up">Signup</Link>
+                    No account? Dont worry, Create one ! <Link to="/sign-up">Signup</Link>
                 </span>
             </form>
         </div>

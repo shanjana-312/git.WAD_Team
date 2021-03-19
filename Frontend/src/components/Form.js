@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import FormSignUp from './FormSignUp'
 import Formsuccess from './Formsuccess'
 import './Form.css'
+import { Link } from 'react-router-dom'
 function Form() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     function submitform() {
@@ -11,7 +12,7 @@ function Form() {
         <>
             <div className="form-container">
                 <span className="close-btn">
-                    x
+                    <Link to="/" style={{ color: 'white', textDecoration: "none" }}>x</Link>
                 </span>
                 {!isSubmitted ? <FormSignUp submitform={submitform} /> : <Formsuccess />}
             </div>
