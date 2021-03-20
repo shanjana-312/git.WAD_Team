@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\91868\PycharmProjects\git.WAD_Team24\env"
+VIRTUAL_ENV="C:\Users\91868\Desktop\wad\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

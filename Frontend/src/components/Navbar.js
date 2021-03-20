@@ -14,12 +14,8 @@ function Navbar() {
     const closeMobileMenu = () => setClick(false);
 
     const onMouseEnter = () => {
-        if (window.innerWidth < 960) {
-            setDropdown1(false);
-        } else {
-            setDropdown1(true);
+        setDropdown1(true);
         }
-    };
 
     const onMouseLeave = () => {
         if (window.innerWidth < 960) {
@@ -30,12 +26,8 @@ function Navbar() {
     };
 
     const onMouseEnter1 = () => {
-        if (window.innerWidth < 960) {
-            setDropdown2(false);
-        } else {
             setDropdown2(true);
         }
-    };
 
     const onMouseLeave1 = () => {
         if (window.innerWidth < 960) {
@@ -49,7 +41,7 @@ function Navbar() {
         <>
             <nav className='navbar'>
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                    <i class='fab fa-staylinked' />TARTUP <span>CLUB</span>
+                    <i class='fab fa-staylinked' />TARTUP CLUB
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
