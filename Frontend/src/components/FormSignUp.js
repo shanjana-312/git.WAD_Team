@@ -9,11 +9,11 @@ function FormSignUp({ submitform }) {
         <div className="form-content-right">
             <form className="formsignup" onSubmit={handleSubmit}>
                 <h1>
-                    Create Account
+                    Create a new account
                 </h1>
                 <div className="form-inputs">
                     <label htmlFor="username" className="form-label">
-                        UserName:
+                        Username
                     </label>
                     <input id="username"
                         type="text"
@@ -27,20 +27,20 @@ function FormSignUp({ submitform }) {
                 <div className="form-inputs">
                     <label htmlFor="email"
                         className="form-label">
-                        Email:
+                        Email
                     </label>
                     <input id="email"
                         type="email"
                         name="email"
                         className="form-input"
-                        placeholder="Enter your email"
+                        placeholder="Enter your email address"
                         value={values.email}
                         onChange={handleChange}
                     />{errors.email && <p>{errors.email}</p>}
                 </div>
                 <div className="form-inputs">
                     <label htmlFor="password" className="form-label">
-                        Password:
+                        Password
                     </label>
                     <input id="password"
                         type="password"
@@ -53,21 +53,21 @@ function FormSignUp({ submitform }) {
                 </div>
                 <div className="form-inputs">
                     <label htmlFor="password2" className="form-label">
-                        Confirm Password:
+                        Confirm Password
                     </label>
                     <input id="password2"
                         type="password"
                         name="password2"
                         className="form-input"
-                        placeholder="Enter your password"
+                        placeholder="Re-enter your password"
                         value={values.password2}
                         onChange={handleChange}
                     />
                     {errors.password2 && <p>{errors.password2}</p>}
                 </div>
-                <button className="form-input-btn" type="submit">Sign up</button>
+                <button className="form-input-btn" type="submit">Sign Up</button>
                 <span className="form-input-login">
-                    Already have an account?<Link to="/login">Login</Link>
+                    Already have an account?<Link to="/login"> Login</Link>
                 </span>
             </form>
         </div>
