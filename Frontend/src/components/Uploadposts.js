@@ -63,4 +63,4 @@ function Uploadposts() {
         </div>
     );
 }
-export default Uploadposts
+export default Uploadposts;

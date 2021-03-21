@@ -5,6 +5,8 @@ function Upload() {
     return (
         <div className="upload">
             <Uploadform />
+
+
         </div>
 
     );

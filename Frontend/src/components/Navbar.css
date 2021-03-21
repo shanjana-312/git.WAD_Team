@@ -16,6 +16,7 @@
     font-size: 1.5rem;
     display: flex;
     align-items: center;
+    white-space: nowrap;
   }
   
   .fa-staylinked{
@@ -120,10 +121,18 @@
   }
   @media screen and (max-width: 960px) {
     .searchButton{
-      display: none;
+      display: all;
+      margin-top:45px;
+      margin-left:50px;
+      margin-right:100px;
+
     }
     .searchContainer{
-      display:none
+      display:all;
+      margin-top:10px;
+      margin-right:150px;
+      margin-left:420px;
+
     }
     .btn1{
       display: none;
@@ -139,7 +148,8 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 100vh;
+
+      height: 90vh;
       position: absolute;
       top: 80px;
       left: -100%;
@@ -171,8 +181,9 @@
     .navbar-logo {
       position: absolute;
       top: 0;
-      left: 0;
-      transform: translate(25%, 50%);
+      font-size:35px;
+      left:0;
+      transform: translate(5%, 50%);
     }
   
     .menu-icon {

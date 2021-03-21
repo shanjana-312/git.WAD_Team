@@ -28,15 +28,16 @@ background-size: cover;
     font-size: 80px;
     margin-top:90px;
     text-align:center;
-
 }
 
 .hero-btns{
     margin-top: 175px;
+
 }
 .hero-btns .btn{
     margin:6px;
     color:#fff;
+
 
 }
 .fa-play-circle{
@@ -63,5 +64,6 @@ background-size: cover;
     }
     .btn{
         width: 100%;
+        font-size:30px;
     }
 }
