@@ -9,6 +9,7 @@
     background-color: transparent;
     color: #fff;
     border-radius: 4px;
+    white-space: nowrap;
     /* background-color: var(--primary); */
   }
   

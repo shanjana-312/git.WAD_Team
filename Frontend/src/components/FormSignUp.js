@@ -1,10 +1,53 @@
-import React from 'react'
-import useForm from './useForm'
-import Validate from './Validateinfo'
+import React, { useEffect, useState } from 'react'
+// import useForm from './useForm'
+import Validateinfo from './Validateinfo'
 import './Form.css'
 import { Link } from "react-router-dom"
-function FormSignUp({ submitform }) {
-    const { handleChange, values, handleSubmit, errors } = useForm(submitform, Validate);
+import APIService from '../APIService'
+import { useCookies } from 'react-cookie'
+import { useHistory } from 'react-router-dom'
+function FormSignUp() {
+    // const { handleChange, values, handleSubmit, errors } = useForm(submitform, Validate);
+    const [values, setValues] = useState({
+        username: '',
+        email: '',
+        password: '',
+        password2: '',
+    })
+    const [errors, setErrors] = useState({})
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const handleChange = e => {
+        const { name, value } = e.target
+        setValues({
+            ...values,
+            [name]: value
+        })
+    }
+    const handleSubmit = e => {
+        e.preventDefault();
+        setErrors(Validateinfo(values));
+        setIsSubmitting(true);
+    }
+    const { username, email, password, password2 } = values;
+    // const [token, setToken] = useCookies(['mytoken']);
+    // const [isLogin, setLogin] = useState(true);
+    let history = useHistory()
+    // useEffect(() => {
+    //     if (token['mytoken']) {
+    //         history.push('/')
+    //     }
+    // }, [token])
+
+    // const LoginBtn = () => {
+    //     APIService.LoginUser({ username, password })
+    //         .then(resp => setToken('mytoken', resp.token))
+    //         .catch(error => console.log(error))
+    // }
+    const RegisterBtn = () => {
+        APIService.RegisterUser({ username, password })
+            .then(history.push('/'))
+            .catch(error => console.log(error))
+    }
     return (
         <div className="form-content-right">
             <form className="formsignup" onSubmit={handleSubmit}>
@@ -65,7 +108,7 @@ function FormSignUp({ submitform }) {
                     />
                     {errors.password2 && <p>{errors.password2}</p>}
                 </div>
-                <button className="form-input-btn" type="submit">Sign up</button>
+                <button className="form-input-btn" type="submit" onClick={RegisterBtn}>Sign up</button>
                 <span className="form-input-login">
                     Already have an account?<Link to="/login">Login</Link>
                 </span>

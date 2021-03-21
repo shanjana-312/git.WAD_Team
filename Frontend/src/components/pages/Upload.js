@@ -1,9 +1,10 @@
 import React from 'react'
+import Uplaodform from '../Uploadform'
 // import UploadImage from '../UploadImage'
 function Upload() {
     return (
         <div className="upload">
-            Upload here!!
+            <Uplaodform />
         </div>
 
     );

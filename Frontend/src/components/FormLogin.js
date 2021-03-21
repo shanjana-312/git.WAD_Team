@@ -1,11 +1,36 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import useForm from './useForm'
 import Validate from './Validateinfo'
 import './Form2.js'
 import { Link } from "react-router-dom"
-import Home from './pages/Home'
+import APIService from '../APIService'
+import { useCookies } from 'react-cookie'
+import { useHistory } from 'react-router-dom'
+import Button2 from './Button2.js'
 function FormLogin({ submitform }) {
     const { handleChange, values, handleSubmit, errors } = useForm(submitform, Validate);
+    const { username, email, password, password2, } = values;
+    const [token, setToken] = useCookies(['mytoken']);
+    const [isLogin, setLogin] = useState(true);
+    let history = useHistory()
+    useEffect(() => {
+        if (token['mytoken'] != "undefined") {
+            if (token['mytoken']) {
+                history.push('/');
+            }
+        }
+        else {
+            alert("Enter correct username or password!!");
+        }
+    }, [token])
+
+    const loginBtn = () => {
+        APIService.LoginUser({ username, password })
+            .then(resp => setToken('mytoken', resp.token))
+            .catch(error => console.log(error))
+    }
+    // const logOut = () => {
+    // }
     return (
         <div className="form2-content-right">
             <form className="formlogin" onSubmit={handleSubmit}>
@@ -40,10 +65,10 @@ function FormLogin({ submitform }) {
                     />{errors.password && <p>{errors.password}</p>}
                 </div>
 
-                <button className="form2-input-btn" type="login">Login</button>
-                <span className="form2-input-Signup">
-                    No account? Dont worry, Create one ! <Link to="/sign-up">Signup</Link>
-                </span>
+                <button className="form2-input-btn" type="login" onClick={loginBtn}>Login</button>
+                {isLogin ? <span className="form2-input-Signup">
+                    No account? Dont worry, Create one ! <Link to="/sign-up" onClick={() => setLogin(false)}>Signup</Link>
+                </span> : setLogin(true)}
             </form>
         </div>
     );

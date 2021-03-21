@@ -11,24 +11,27 @@ import Upload from './components/pages/Upload';
 import FindJobs from './components/pages/FindJobs';
 import Funds from './components/pages/Funds';
 import Footer from './components/Footer';
+import { CookiesProvider } from 'react-cookie'
 function App() {
   return (
     <>
-      <Router>
-        <Navbar />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/sign-up" component={SignUp} />
-          <Route path="/login" component={login} />
-          <Route path="/posts" component={Posts} />
-          <Route path="/upload" component={Upload} />
-          <Route path="/findjobs" component={FindJobs} />
-          <Route path="/funds" component={Funds} />
+      <CookiesProvider>
+        <Router>
+          <Navbar />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/sign-up" component={SignUp} />
+            <Route path="/login" component={login} />
+            <Route path="/posts" component={Posts} />
+            <Route path="/upload" component={Upload} />
+            <Route path="/findjobs" component={FindJobs} />
+            <Route path="/funds" component={Funds} />
 
-        </Switch>
-        <Footer />
-      </Router>
+          </Switch>
+          <Footer />
+        </Router>
+      </CookiesProvider>
     </>
   );
 }

@@ -1,21 +1,21 @@
-.dropdown-menu{
+.dropdown2-menu{
     width:200px;
     position:absolute;
     top:80px;
     list-style:none;
     text-align:start;
 }
-.dropdown-menu li{
+.dropdown2-menu li{
     background:black;
     cursor:pointer;
 }
-.dropdown-menu li:hover{
+.dropdown2-menu li:hover{
     background:white;
 }
-.dropdown-menu.clicked{
+.dropdown2-menu.clicked{
     display:none;
 }
-.dropdown-link{
+.dropdown2-link{
     display: block;
     width:100%;
     height:100%;
@@ -23,15 +23,15 @@
     color:white;
     padding:16px;
 }
-.dropdown-link:hover{
+.dropdown2-link:hover{
     color:black;
 }
 @media screen and (max-width: 960px) {
-    .dropdown-menu{
+    .dropdown2-menu{
         width:200px;
         position:absolute;
-        top:10rem;
+        top:20rem;
         list-style:none;
-        text-align:start;
+        text-align:center;
     }   
 }

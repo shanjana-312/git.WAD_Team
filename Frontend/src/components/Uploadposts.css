@@ -1,15 +1,16 @@
-.form2-container {
-  margin: 40px auto;
-  margin-top:250px;
+.form-container_upload {
+  margin: 40px ;
   width: 600px;
+  margin-bottom:150px;
+  margin-top:250px;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   border-radius: 10px;
-  height: 500px;
+  height: 700px;
   display: grid;
 }
 
-.form2-container .close2-btn {
+.form-container_upload .close-btn {
   position: absolute;
   top: 2%;
   right: 3%;
@@ -26,13 +27,13 @@
   color: #fff;
 }
 
-.form2-content-right {
+.form-content-right {
   border-radius: 10px;
   position: relative;
   background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(17, 17, 17) 100%);
 }
 
-.form2-content-right > .formlogin  {
+.form-content-right > .formsignup {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -45,7 +46,7 @@
   align-items: center;
 }
 
-.form2-content-right > .formlogin> h1 {
+.form-content-right > .formsignup> h1 {
   font-size: 1.5rem;
   text-align: start;
   width: 80%;
@@ -53,25 +54,25 @@
   color: #fff;
 }
 
-.form2-inputs {
+.form-inputs {
   margin-bottom: 0.0px;
   width: 80%;
 }
 
-.form2-content-right  .formlogin  .form2-inputs  p {
+.form-content-right  .formsignup .form-inputs  p {
   font-size: 1rem;
   margin-top: 0.3rem;
   color: #f00e0e;
 }
 
-.form2-content-right .formlogin .form2-inputs .form2-label {
+.form-content-right .formsignup .form-inputs .form-label {
   display: inline-block;
   font-size: 1rem;
   margin-bottom: 5px;
   color: #fff;
 }
 
-.form2-content-right > .formlogin>.form2-inputs >.form2-input {
+.form-content-right > .formsignup>.form-inputs >.form-input {
   display: block;
   padding-left: 10px;
   outline: none;
@@ -82,12 +83,12 @@
   border: none;
 }
 
-.form2-content-right > .formlogin>.form2-inputs > .form2-input::placeholder {
+.form-content-right > .formsignup>.form-inputs > .form-input::placeholder {
   color: #595959;
   font-size: 14px;
 }
 
-.form2-content-right > .formlogin>.form2-input-btn {
+.form-content-right > .formsignup>.form-input-btn {
   width: 80%;
   height: 50px;
   margin-top: 50px;
@@ -103,7 +104,7 @@
   font-size: 1rem;
 }
 
-.form2-content-right > .formlogin > .form2-input-btn:hover {
+.form-content-right > .formsignup> .form-input-btn:hover {
   cursor: pointer;
   background: linear-gradient(
     90deg,
@@ -113,15 +114,15 @@
   transition: all 0.4s ease-out;
 }
 
-.form2-content-right > .formlogin> .form2-input-Signup {
-  font-size: 0.9rem;
+.form-content-right > .formsignup> .form-input-login {
+  font-size: 1rem;
   margin-top: 8px;
   color: #fff;
   width: 100%;
   text-align: center;
 }
 
-.form2-content-right > .formlogin> .form2-input-Signup >a {
+.form-content-right > .formsignup> .form-input-login >a {
   text-decoration: none;
   color: #27cdff;
   font-weight: 600;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button2 } from './Button2';
+import Button2 from './Button2';
 import { Button3 } from './Button3';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
@@ -15,7 +15,7 @@ function Navbar() {
 
     const onMouseEnter = () => {
         setDropdown1(true);
-        }
+    }
 
     const onMouseLeave = () => {
         if (window.innerWidth < 960) {
@@ -26,8 +26,9 @@ function Navbar() {
     };
 
     const onMouseEnter1 = () => {
-            setDropdown2(true);
-        }
+        setDropdown2(true);
+
+    }
 
     const onMouseLeave1 = () => {
         if (window.innerWidth < 960) {
@@ -52,17 +53,6 @@ function Navbar() {
                             <i className="fas fa-home"></i> Home
             </Link>
                     </li>
-                    <li
-                        className='nav-item'
-                    >
-                        <Link
-                            to="/about"
-                            className='nav-links'
-                            onClick={closeMobileMenu}
-                        >
-                            <i class="fas fa-address-card"></i>About
-                        </Link>
-                    </li>
                     <li className='nav-item'
                         onMouseEnter={onMouseEnter}
                         onMouseLeave={onMouseLeave}
@@ -74,6 +64,18 @@ function Navbar() {
                             <i class="far fa-window-restore"></i> Browse<i className='fas fa-caret-down' />
                         </Link> {dropdown1 && <Dropdown />}
                     </li>
+                    <li
+                        className='nav-item'
+                    >
+                        <Link
+                            to="/about"
+                            className='nav-links'
+                            onClick={closeMobileMenu}
+                        >
+                            <i class="fas fa-address-card"></i>About
+                        </Link>
+                    </li>
+
                     <li className='nav-item'
                         onMouseEnter={onMouseEnter1}
                         onMouseLeave={onMouseLeave1}
@@ -97,7 +99,7 @@ function Navbar() {
                     </li>
                     <li>
                         <Link
-                            to='/sign-up'
+                            to='/login'
                             className='nav-links-mobile'
                             onClick={closeMobileMenu}
                         >
@@ -105,9 +107,12 @@ function Navbar() {
             </Link>
                     </li>
                 </ul>
-                <div className="searchContainer"><i className="fa fa-search searchIcon"></i>
-                    <input className="searchBox" type="search" name="search" placeholder="Search..." /></div>
-                <div className="searchbutton"><input type="submit" value="Search" className="searchButton" /></div>
+                <form>
+                    <div className="searchContainer">
+                        <input type="search" className="search" name="name" placeholder="Search..." />
+                        <button className="search-btn" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
                 <div className="btn1"><Button2 /></div>
                 <div className="btn1"><Button3 /></div>
             </nav>
