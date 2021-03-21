@@ -35,17 +35,17 @@ function FormLogin({ submitform }) {
         <div className="form2-content-right">
             <form className="formlogin" onSubmit={handleSubmit}>
                 <h1>
-                    Login
+                    Log In
                 </h1>
                 <div className="form2-inputs">
                     <label htmlFor="username" className="form2-label">
-                        UserName:
+                        Username or email
                     </label>
                     <input id="username"
                         type="text"
                         name="username"
                         className="form2-input"
-                        placeholder="Enter your username"
+                        placeholder="Enter your username or email address"
                         value={values.username}
                         onChange={handleChange}
                     />{errors.username && <p>{errors.username}</p>}
@@ -53,7 +53,7 @@ function FormLogin({ submitform }) {
 
                 <div className="form2-inputs">
                     <label htmlFor="password" className="form2-label">
-                        Password:
+                        Password
                     </label>
                     <input id="password"
                         type="password"

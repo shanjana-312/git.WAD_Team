@@ -52,8 +52,6 @@ function Uploadposts() {
                         type="file"
                         name="image"
                         className="form-input"
-
-
                     />
                 </div>
                 <button className="form-input-btn" type="submit">Create</button>
