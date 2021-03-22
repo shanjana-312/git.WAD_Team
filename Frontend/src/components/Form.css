@@ -54,7 +54,7 @@
 }
 
 .form-content-right > .formsignup> h1 {
-  font-size: 1rem;
+  font-size: 1.8rem;
   text-align: start;
   width: 80%;
   margin-bottom: 0.5rem;
@@ -67,14 +67,14 @@
 }
 
 .form-content-right  .formsignup .form-inputs  p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-top: 0.3rem;
   color: #f00e0e;
 }
 
 .form-content-right .formsignup .form-inputs .form-label {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-bottom: 5px;
   color: #fff;
 }
@@ -92,7 +92,7 @@
 
 .form-content-right > .formsignup>.form-inputs > .form-input::placeholder {
   color: #595959;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .form-content-right > .formsignup>.form-input-btn {
@@ -122,7 +122,7 @@
 }
 
 .form-content-right > .formsignup> .form-input-login {
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-top: 8px;
   color: #fff;
   width: 100%;

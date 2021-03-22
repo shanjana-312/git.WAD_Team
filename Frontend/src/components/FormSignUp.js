@@ -108,9 +108,9 @@ function FormSignUp() {
                     />
                     {errors.password2 && <p>{errors.password2}</p>}
                 </div>
-                <button className="form-input-btn" type="submit" onClick={RegisterBtn}>Sign up</button>
+                <button className="form-input-btn" type="submit" onClick={RegisterBtn}>Sign Up</button>
                 <span className="form-input-login">
-                    Already have an account?<Link to="/login"> Login</Link>
+                    Already have an account?<Link to="/login"> Log In</Link>
                 </span>
             </form>
         </div>

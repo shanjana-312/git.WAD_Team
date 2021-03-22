@@ -65,9 +65,9 @@ function FormLogin({ submitform }) {
                     />{errors.password && <p>{errors.password}</p>}
                 </div>
 
-                <button className="form2-input-btn" type="login" onClick={loginBtn}>Login</button>
+                <button className="form2-input-btn" type="login" onClick={loginBtn}>Log In</button>
                 {isLogin ? <span className="form2-input-Signup">
-                    No account? Dont worry, Create one ! <Link to="/sign-up" onClick={() => setLogin(false)}>Signup</Link>
+                    New to StartUp Club? Create an account to explore right away! <Link to="/sign-up" onClick={() => setLogin(false)}>Sign Up</Link>
                 </span> : setLogin(true)}
             </form>
         </div>
