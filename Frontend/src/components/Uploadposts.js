@@ -1,60 +1,76 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Uploadposts.css'
 function Uploadposts() {
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("")
+    const [upload, setUpload] = useState();
+    const newPost = () => {
+        const uploadData = new FormData()
+        uploadData.append('title', title);
+        uploadData.append('description', description);
+        uploadData.append('upload', upload, upload.name);
+        fetch("http://127.0.0.1:8000/Frontend/posts/", {
+            method: 'POST',
+            body: uploadData
+        })
+            .then(res => console.log(res))
+            .catch(error => console.log(error))
+    }
     return (
-        <div className="form-content-right">
-            <form className="formsignup" >
+        <div className="formup-content-right">
+            <form className="formup">
                 <h1>
                     Add your post
                 </h1>
-                <div className="form-inputs">
-                    <label htmlFor="Title" className="form-label">
+                <div className="formup-inputs">
+                    <label htmlFor="Title" className="formup-label">
                         Title
                     </label>
                     <input id="Title"
                         type="text"
                         name="Title"
-                        className="form-input"
+                        className="formup-input"
                         placeholder="Enter title"
-
+                        value={title} onChange={(e) => setTitle(e.target.value)}
                     />
                 </div>
-                <div className="form-inputs">
+                <div className="formup-inputs">
                     <label htmlFor="link"
-                        className="form-label">
+                        className="formup-label">
                         Google Drive Link
                     </label>
                     <input id="link"
                         type="url"
                         name="link"
-                        className="form-input"
+                        className="formup-input"
                         placeholder="Enter the Google drive link"
 
 
                     />
                 </div>
-                <div className="form-inputs">
-                    <label htmlFor="image1" className="form-label">
+                <div className="formup-inputs">
+                    <label htmlFor="image1" className="formup-label">
                         Image
                     </label>
                     <input id="image1"
-                        type="file"
+                        type="file" multiple
                         name="image1"
-                        className="form-input"
-
+                        className="formup-input"
+                        onChange={(e) => setUpload(e.target.files[0])}
                     />
                 </div>
-                <div className="form-inputs">
-                    <label htmlFor="image2" className="form-label">
-                        Sub Image
+                <div className="formup-inputs">
+                    <label htmlFor="Description" className="formup-label">
+                        Description
                     </label>
                     <input id="image2"
-                        type="file"
-                        name="image"
-                        className="form-input"
+                        type="text"
+                        name="Description"
+                        className="formup-input"
+                        value={description} onChange={(e) => setDescription(e.target.value)}
                     />
                 </div>
-                <button className="form-input-btn" type="submit">Create</button>
+                <button className="formup-input-btn" type="submit" onClick={() => newPost()}>Create</button>
             </form>
         </div>
     );
