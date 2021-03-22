@@ -23,10 +23,11 @@ class PostViewSet(viewsets.ModelViewSet):
 
     def post(self, request, *args, **kwargs):
         title = request.data['title']
+        driveLink=request.data['driveLink']
         description = request.data['description']
         upload = request.data['upload']
         Post.objects.create(
-            title=title, description=description, upload=upload)
+            title=title,driveLink=driveLink, description=description, upload=upload)
         return HTTPResponse({'message': 'Posts Created'}, status=200)
         # def post_list(request):
         #     if request.method == 'GET':

@@ -5,5 +5,5 @@ from .models import Post
 
 @admin.register(Post)
 class PostModel(admin.ModelAdmin):
-    list_filter = ('title', 'description', 'upload')
-    list_display = ('title', 'description', 'upload')
+    list_filter = ('title','driveLink', 'description', 'upload')
+    list_display = ('title', 'driveLink','description', 'upload')

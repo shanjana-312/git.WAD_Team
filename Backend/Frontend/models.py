@@ -9,6 +9,7 @@ def upload_path(instance, filename):
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
+    driveLink=models.URLField(max_length=400)
     description = models.TextField(max_length=300)
     upload = models.ImageField(blank=True, null=True, upload_to=upload_path)
 
