@@ -1,7 +1,5 @@
 from django.shortcuts import render
-
-# Create your views here.
-# from django.shortcuts import render
+from django.http import HttpResponse
 from .models import Post
 from .serializers import PostSerializer, UserSerializer
 # from django.http import JsonResponse
@@ -20,21 +18,29 @@ def index(request):
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    authentication_classes = (TokenAuthentication)
-    permission_classes = [IsAuthenticated]
-# def post_list(request):
-#     if request.method == 'GET':
-#         posts = Post.object.all()
-#         serializer = PostSerializer(posts, many=True)
-#         return JsonResponse(serializer.data, safe=False)
+    # authentication_classes = (TokenAuthentication,)
+    # permission_classes = [IsAuthenticated, ]
 
-#     elif request.method == 'POST':
-#         data = JSONParser().parse(request)
-#         serializer = PostSerializer(data=data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return JsonResponse(serializer.data, status=201)
-#             return JsonResponse(serializer.errors, status=400)
+    def post(self, request, *args, **kwargs):
+        title = request.data['title']
+        description = request.data['description']
+        upload = request.data['upload']
+        Post.objects.create(
+            title=title, description=description, upload=upload)
+        return HTTPResponse({'message': 'Posts Created'}, status=200)
+        # def post_list(request):
+        #     if request.method == 'GET':
+        #         posts = Post.object.all()
+        #         serializer = PostSerializer(posts, many=True)
+        #         return JsonResponse(serializer.data, safe=False)
+
+        #     elif request.method == 'POST':
+        #         data = JSONParser().parse(request)
+        #         serializer = PostSerializer(data=data)
+        #         if serializer.is_valid():
+        #             serializer.save()
+        #             return JsonResponse(serializer.data, status=201)
+        #             return JsonResponse(serializer.errors, status=400)
 
 
 class UserViewSet(viewsets.ModelViewSet):
