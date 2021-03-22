@@ -6,7 +6,7 @@
   align-items: center;
   font-size: 20px;
 }
- 
+
   .navbar-logo {
     color: #fff;
     justify-self: start;
@@ -18,10 +18,10 @@
     align-items: center;
     white-space: nowrap;
   }
-  
+
   .fa-staylinked{
     font-size: 1.8rem;
-    
+
   }
   .fa-caret-down{
     margin-left: 10px;
@@ -53,13 +53,13 @@
 
     margin-right: 2rem;
   }
-  
+
   .nav-item {
     display: flex;
     align-items: center;
     height: 80px;
   }
-  
+
   .nav-links {
     color: #fff;
     display: flex;
@@ -68,21 +68,21 @@
     padding: 0.5rem 1rem;
     height: 100%;
   }
-  
+
   .nav-links:hover {
     /* border-bottom: 6px solid #fff; */
     border-bottom:2px solid #fff;
     transition: all 0.2s ease-out;
   }
-  
+
   .fa-bars {
     color: rgb(255, 255, 255);
   }
-  
+
   .nav-links-mobile {
     display: none;
   }
-  
+
   .menu-icon {
     display: none;
   }
@@ -96,20 +96,9 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
-    height: 30px;
   }
-  
-  .searchIcon {
-    padding: 0.5rem;
-    color: white;
-  }
-  
-  .searchBox {
-    border: 0;
-    padding: 0.5rem 0.5rem 0.5rem 0;
-    flex: 1;
-  }
-  .searchButton {
+
+  .search-btn{
     padding: 0.5rem 0.5rem 0.5rem 0;
     background: #f18e32;
     border: 0;
@@ -117,21 +106,22 @@
     border-radius: 5px;
     color: white;
     border-radius: 0;
+    width:50px;
+
     text-align: center;
   }
   @media screen and (max-width: 960px) {
-    .searchButton{
+    .search-btn{
       display: all;
-      margin-top:45px;
-      margin-left:50px;
-      margin-right:100px;
+      width:200px;
     }
     .searchContainer{
       display:all;
       margin-top:10px;
-      margin-right:150px;
-      margin-left:420px;
-      height: 30px;
+      margin-right:90px;
+      margin-left:380px;
+      width:200px;
+      height:40px;
     }
     .btn1{
       display: none;
@@ -142,7 +132,7 @@
     .NavbarItems {
       position: relative;
     }
-  
+
     .nav-menu {
       display: flex;
       flex-direction: column;
@@ -155,7 +145,7 @@
       opacity: 1;
       transition: all 0.5s ease;
     }
-  
+
     .nav-menu.active {
       background: #242222;
       left: 0;
@@ -163,20 +153,20 @@
       transition: all 0.5s ease;
       z-index: 1;
     }
-  
+
     .nav-links {
       text-align: center;
       padding-top: 25px;
       width: 100%;
       display: table;
     }
-  
+
     .nav-links:hover {
       background: #fff;
       color: #242424;
       border-radius: 0;
     }
-  
+
     .navbar-logo {
       position: absolute;
       top: 0;
@@ -184,7 +174,7 @@
       left:0;
       transform: translate(5%, 50%);
     }
-  
+
     .menu-icon {
       display: block;
       position: absolute;
@@ -194,12 +184,12 @@
       font-size: 1.8rem;
       cursor: pointer;
     }
-  
+
     .fa-times {
       color: #fff;
       font-size: 1.5rem;
     }
-  
+
     .nav-links-mobile {
       display: block;
       text-align: center;
@@ -214,7 +204,7 @@
       border: 1px solid #fff;
       transition: all 0.3s ease-out;
     }
-  
+
     .nav-links-mobile:hover {
       background: #fff;
       color: #242424;
