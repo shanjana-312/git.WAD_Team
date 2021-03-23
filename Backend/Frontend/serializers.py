@@ -24,7 +24,7 @@ from rest_framework.authtoken.views import Token
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ['id', 'title', 'description', 'upload']
+        fields = ['id', 'title', 'driveLink', 'description', 'upload']
 
 
 class UserSerializer(serializers.ModelSerializer):

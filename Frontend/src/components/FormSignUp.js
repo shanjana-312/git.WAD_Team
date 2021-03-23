@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 // import useForm from './useForm'
+import FormLogin from './FormLogin'
 import Validateinfo from './Validateinfo'
 import './Form.css'
 import { Link } from "react-router-dom"
@@ -30,13 +31,15 @@ function FormSignUp() {
     }
     const { username, email, password, password2 } = values;
     // const [token, setToken] = useCookies(['mytoken']);
-    // const [isLogin, setLogin] = useState(true);
+    const [isLogin, setLogin] = useState(true);
+    const [name, setName] = useState(username);
     let history = useHistory()
-    // useEffect(() => {
-    //     if (token['mytoken']) {
-    //         history.push('/')
-    //     }
-    // }, [token])
+    useEffect(() => {
+        if (values.username && password != "" && password == password2) {
+            history.push('/')
+            document.getElementById('btn2').innerHTML = name;
+        }
+    }, [name])
 
     // const LoginBtn = () => {
     //     APIService.LoginUser({ username, password })
@@ -45,7 +48,7 @@ function FormSignUp() {
     // }
     const RegisterBtn = () => {
         APIService.RegisterUser({ username, password })
-            .then(history.push('/'))
+            .then(resp => setName(values.username, resp.username))
             .catch(error => console.log(error))
     }
     return (
@@ -108,9 +111,9 @@ function FormSignUp() {
                     />
                     {errors.password2 && <p>{errors.password2}</p>}
                 </div>
-                <button className="form-input-btn" type="submit" onClick={RegisterBtn}>Sign up</button>
+                <button className="form-input-btn" type="submit" onClick={RegisterBtn}>Sign Up</button>
                 <span className="form-input-login">
-                    Already have an account?<Link to="/login"> Login</Link>
+                    Already have an account?<Link to="/login"> Log In</Link>
                 </span>
             </form>
         </div>

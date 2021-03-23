@@ -4,13 +4,13 @@ import Validate from './Validateinfo'
 import './Form2.js'
 import { Link } from "react-router-dom"
 import APIService from '../APIService'
-import { useCookies } from 'react-cookie'
+import { Cookies, useCookies } from 'react-cookie'
 import { useHistory } from 'react-router-dom'
 import Button2 from './Button2.js'
 function FormLogin({ submitform }) {
     const { handleChange, values, handleSubmit, errors } = useForm(submitform, Validate);
     const { username, email, password, password2, } = values;
-    const [token, setToken] = useCookies(['mytoken']);
+    const [token, setToken, removeToken] = useCookies(['mytoken']);
     const [isLogin, setLogin] = useState(true);
     let history = useHistory()
     useEffect(() => {
@@ -20,14 +20,21 @@ function FormLogin({ submitform }) {
             }
         }
         else {
-            alert("Enter correct username or password!!");
+
+            // alert("Enter correct username or password!!");
         }
     }, [token])
-
     const loginBtn = () => {
         APIService.LoginUser({ username, password })
             .then(resp => setToken('mytoken', resp.token))
             .catch(error => console.log(error))
+        if (token['mytoken'] == "undefined") {
+            alert("Enter correct uername or password!!");
+        }
+        else {
+            document.getElementById('btn2').innerHTML = username;
+            // document.getElementById('btn3').innerHTML = "Log Out";
+        }
     }
     // const logOut = () => {
     // }
@@ -65,9 +72,9 @@ function FormLogin({ submitform }) {
                     />{errors.password && <p>{errors.password}</p>}
                 </div>
 
-                <button className="form2-input-btn" type="login" onClick={loginBtn}>Login</button>
+                <button className="form2-input-btn" type="login" onClick={loginBtn}>Log In</button>
                 {isLogin ? <span className="form2-input-Signup">
-                    No account? Dont worry, Create one ! <Link to="/sign-up" onClick={() => setLogin(false)}>Signup</Link>
+                    New to StartUp Club? Create an account to explore right away! <Link to="/sign-up" onClick={() => setLogin(false)}>Sign Up</Link>
                 </span> : setLogin(true)}
             </form>
         </div>
