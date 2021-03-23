@@ -53,17 +53,6 @@ function Navbar() {
                             <i className="fas fa-home"></i> Home
             </Link>
                     </li>
-                    <li className='nav-item'
-                        onMouseEnter={onMouseEnter}
-                        onMouseLeave={onMouseLeave}
-                    >
-                        <Link
-                            className='nav-links'
-                            onClick={closeMobileMenu}
-                        >
-                            <i class="far fa-window-restore"></i> Browse<i className='fas fa-caret-down' />
-                        </Link> {dropdown1 && <Dropdown />}
-                    </li>
                     <li
                         className='nav-item'
                     >
@@ -75,7 +64,17 @@ function Navbar() {
                             <i class="fas fa-address-card"></i>About
                         </Link>
                     </li>
-
+                     <li className='nav-item'
+                        onMouseEnter={onMouseEnter}
+                        onMouseLeave={onMouseLeave}
+                    >
+                        <Link
+                            className='nav-links'
+                            onClick={closeMobileMenu}
+                        >
+                            <i class="far fa-window-restore"></i> Browse<i className='fas fa-caret-down' />
+                        </Link> {dropdown1 && <Dropdown />}
+                    </li>
                     <li className='nav-item'
                         onMouseEnter={onMouseEnter1}
                         onMouseLeave={onMouseLeave1}
