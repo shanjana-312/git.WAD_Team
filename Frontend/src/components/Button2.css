@@ -22,3 +22,11 @@
     transition: all 0.3s ease-out;
     cursor: pointer;
   }
+
+  .fa-user{
+    margin-right: 5px;
+  }
+
+  .fa-sign-in-alt{
+    margin-right: 5px;
+  }

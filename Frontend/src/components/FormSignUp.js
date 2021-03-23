@@ -37,6 +37,7 @@ function FormSignUp() {
     useEffect(() => {
         if (values.username && password != "" && password == password2) {
             history.push('/')
+            alert("Thanks! Your account has been successfully created");
             document.getElementById('btn2').innerHTML = name;
         }
     }, [name])
@@ -47,7 +48,7 @@ function FormSignUp() {
     //         .catch(error => console.log(error))
     // }
     const RegisterBtn = () => {
-        APIService.RegisterUser({ username, password })
+        APIService.RegisterUser({ username, email, password })
             .then(resp => setName(values.username, resp.username))
             .catch(error => console.log(error))
     }

@@ -29,12 +29,12 @@ function FormLogin({ submitform }) {
             .then(resp => setToken('mytoken', resp.token))
             .catch(error => console.log(error))
         if (token['mytoken'] == "undefined") {
-            alert("Enter correct uername or password!!");
+            alert("Invalid username or password!");
         }
-        else {
-            document.getElementById('btn2').innerHTML = username;
+       /* else {
+            //document.getElementById('btn2').innerHTML = username;
             // document.getElementById('btn3').innerHTML = "Log Out";
-        }
+        } */
     }
     // const logOut = () => {
     // }

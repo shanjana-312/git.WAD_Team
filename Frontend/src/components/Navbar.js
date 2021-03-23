@@ -64,7 +64,7 @@ function Navbar() {
                             <i class="fas fa-address-card"></i>About
                         </Link>
                     </li>
-                     <li className='nav-item'
+                    <li className='nav-item'
                         onMouseEnter={onMouseEnter}
                         onMouseLeave={onMouseLeave}
                     >
@@ -86,6 +86,11 @@ function Navbar() {
                         >
                             <i class="fas fa-question"></i>Support<i className='fas fa-caret-down' />
                         </Link>{dropdown2 && <Dropdown2 />}
+                    </li>
+                    <li className='nav-item'>
+                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                            <i className="fas fa-user-edit"></i> Experience
+            </Link>
                     </li>
                     <li>
                         <Link
@@ -109,7 +114,7 @@ function Navbar() {
                 <form>
                     <div className="searchContainer">
                         <input type="search" className="search" name="name" placeholder="Search..." />
-                        <button className="search-btn" type="submit"><i class="fa fa-search"></i></button>
+                        <button className="search-btn" type="submit"><i className="fa fa-search"></i></button>
                     </div>
                 </form>
                 <div className="btn1"><Button2 /></div>
