@@ -1,9 +1,10 @@
 .dropdown2-menu{
-    width:200px;
+    width:170px;
     position:absolute;
     top:80px;
+    font-size:20px;
     list-style:none;
-    text-align:start;
+    text-align:center;
 }
 .dropdown2-menu li{
     background:black;
@@ -33,5 +34,6 @@
         top:20rem;
         list-style:none;
         text-align:center;
+        margin-left:550px;
     }   
 }

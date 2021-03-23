@@ -1,8 +1,10 @@
 .dropdown-menu{
     position:absolute;
+    width:170px;
+    font-size:20px;
     top:80px;
     list-style:none;
-    text-align:start;
+    text-align:center;
 }
 .dropdown-menu li{
     background:black;
@@ -31,6 +33,7 @@
         position:absolute;
         top:10rem;
         list-style:none;
-        text-align:start;
+        text-align:center;
+        margin-left:550px;
     }   
 }
