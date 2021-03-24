@@ -22,7 +22,7 @@ function Aboutpage(){
                 <li class="flex-item2">
                     <i class="icon far fa-check-circle fa-3x"></i>
                     <h3>Easy to use.</h3>
-                    <p>All components are well explainedand known.</p>
+                    <p>All components are well explained and known.</p>
                 </li>
                 <li class="flex-item2">
                     <i class="icon fas fa-arrow-up fa-3x"></i>
@@ -35,6 +35,25 @@ function Aboutpage(){
                     <p>Need extra help? Our funds section have you covered</p>
                 </li>
             </ul>
+            <div class="howitwork">
+            <h3>How it works</h3>
+            <p>Our website users can submit their self-produced articles, product details and videos for promoting their own business on this platform. List of submissions can be reviewed and users will be able to promote their ideas.</p>
+            <ul  class="feature" >
+                <li >
+                We provide users an option where they will be able to give reviews and rating to the startups.  
+                </li>
+                <li>
+                Users are given an option to give their contact details like email and submit queries.   
+                </li>
+                <li>
+                We embrace people who come up with unique thoughts and insights. We help them to access funding that keeps the initiatives to scale faster. This contribution passionately helps for the betterment that keeps the spirits ahead.  
+                </li>
+                <li>
+                We generate employment by introducing an option for Job opportunities.
+                </li>
+            </ul> 
+            
+            </div>
         </div>
         
         
