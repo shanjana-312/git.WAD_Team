@@ -17,6 +17,7 @@ function FormLogin({ submitform }) {
         if (token['mytoken'] != "undefined") {
             if (token['mytoken']) {
                 history.push('/');
+                document.getElementById("btn2").innerHTML = username;
             }
         }
         else {
@@ -28,8 +29,8 @@ function FormLogin({ submitform }) {
         APIService.LoginUser({ username, password })
             .then(resp => setToken('mytoken', resp.token))
             .catch(error => console.log(error))
-        if (token['mytoken'] == "undefined") {
-            alert("Invalid username or password!");
+         if (token['mytoken'] == "undefined") {
+              alert("Invalid username or password!");
         }
        /* else {
             //document.getElementById('btn2').innerHTML = username;
