@@ -21,25 +21,27 @@ const Fundsform = () => {
         <div className="funds">
             <form className="fundsform" onSubmit={handleSubmit}>
                 <h1>Apply!!</h1>
-                <label>Firstname </label>
-                <input placeholder="firstname" value={firstname} onChange={(e) => setFirstname(e.target.value)} /><br></br>
-                <label>Lastname</label>
-                <input placeholder="lastname" value={lastname} onChange={(e) => setLastname(e.target.value)} /><br></br>
-                <label>Email</label>
-                <input placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} /><br></br>
-                <label>Phone Number</label>
-                <input placeholder="Phone number" value={phonenumber} onChange={(e) => setPhonenumber(e.target.value)} /><br></br>
-                <label>Location</label>
-                <input placeholder="Location" value={location} onChange={(e) => setLocation(e.target.value)} /><br></br>
-                <label>Startup stage</label>
-                <select onChange={(e) => setStage(e.target.value)}>
+                <label class="first">Firstname </label>
+                <input class="namebox" placeholder="firstname" value={firstname} onChange={(e) => setFirstname(e.target.value)} />
+                <label class="last">Lastname</label>
+                <input class="namebox" placeholder="lastname" value={lastname} onChange={(e) => setLastname(e.target.value)} /><br></br>
+                <label class="lbl">Email</label><br></br>
+                <input class="box" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} /><br></br>
+                <label class="lbl">Phone Number</label><br></br>
+                <input class="box" placeholder="Phone number" value={phonenumber} onChange={(e) => setPhonenumber(e.target.value)} /><br></br>
+                <label class="lbl">Location</label><br></br>
+                <input class="box" placeholder="Location" value={location} onChange={(e) => setLocation(e.target.value)} /><br></br>
+                <label class="lbl">Startup stage</label><br></br>
+                <select class="box" onChange={(e) => setStage(e.target.value)}>
+                    <option value="none" selected disabled hidden>Select</option>
                     <option value="Pre-Idea Stage">Pre-Idea Stage</option>
                     <option value="Idea Stage">Idea Stage</option>
                     <option value="Prototyping Stage">Prototyping Stage</option>
                     <option value="MVP/Early Market">MVP/Early Market</option>
                 </select><br></br>
-                <label>Select Industry</label>
-                <select onChange={(e) => setIndustry(e.target.value)}>
+                <label class="lbl">Select Industry</label><br></br>
+                <select class="box" onChange={(e) => setIndustry(e.target.value)}>
+                    <option value="none" selected disabled hidden>Select</option>
                     <option value="Information Technology">Information Technology</option>
                     <option value="Tourism">Tourism</option>
                     <option value="E-commerce">E-commerce</option>
@@ -48,23 +50,25 @@ const Fundsform = () => {
                     <option value="Textiles">Textiles</option>
                     <option value="others">others</option>
                 </select><br></br>
-                <label>What is your Role?</label>
-                <select onChange={(e) => setRole(e.target.value)}>
+                <label class="lbl">What is your Role?</label><br></br>
+                <select class="box" onChange={(e) => setRole(e.target.value)}>
+                    <option value="none" selected disabled hidden>Select</option>
                     <option value="Founder">Founder</option>
                     <option value="TeamLeader">Team Leader</option>
                     <option value="Investor">Investor</option>
                     <option value="Mentor">Mentor</option>
                     <option value="other">other</option>
                 </select><br></br>
-                <label>How many Team members?</label>
-                <select onChange={(e) => setMembers(e.target.value)}>
+                <label class="lbl">How many Team members?</label><br></br>
+                <select class="box" onChange={(e) => setMembers(e.target.value)}>
+                    <option value="none" selected disabled hidden>Select</option>
                     <option value="Just me">Just me</option>
                     <option value="2 to 5 people">2 to 5 people</option>
                     <option value="more than 5">more than 5</option>
                 </select><br></br>
-                <label>Idea of the Startup</label><br></br>
-                <textarea onChange={(e) => setIdea(e.target.value)} /><br></br>
-                <button type="submit">Submit </button >
+                <label class="lbl">Idea of the Startup</label><br></br>
+                <textarea rows="4" cols="83" onChange={(e) => setIdea(e.target.value)} /><br></br>
+                <button class="b" type="submit">Submit </button >
             </form>
         </div>
     )
