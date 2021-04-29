@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 // import useForm from './useForm'
-import FormLogin from './FormLogin'
+// import FormLogin from './FormLogin'
 import Validateinfo from './Validateinfo'
 import './Form.css'
 import { Link } from "react-router-dom"
@@ -17,6 +17,7 @@ function FormSignUp() {
     })
     const [errors, setErrors] = useState({})
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const { username, email, password, password2 } = values;
     const handleChange = e => {
         const { name, value } = e.target
         setValues({
@@ -29,9 +30,9 @@ function FormSignUp() {
         setErrors(Validateinfo(values));
         setIsSubmitting(true);
     }
-    const { username, email, password, password2 } = values;
+
     // const [token, setToken] = useCookies(['mytoken']);
-    const [isLogin, setLogin] = useState(true);
+    // const [isLogin, setLogin] = useState(true);
     const [name, setName] = useState(username);
     let history = useHistory()
     useEffect(() => {

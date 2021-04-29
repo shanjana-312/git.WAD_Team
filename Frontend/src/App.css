@@ -11,7 +11,7 @@
   /* .about, */
   .posts,
   .upload,
-  .funds,
+  /*.funds,*/
   .findjobs,
   .sign-up{
     display: flex;

@@ -1,10 +1,10 @@
 import React from 'react'
-
+import Fundsform from '../Fundsform'
 function Funds() {
     return (
-        <div className="funds">
-            Funds
-        </div>
+        <>
+            <Fundsform />
+        </>
     )
 }
 
