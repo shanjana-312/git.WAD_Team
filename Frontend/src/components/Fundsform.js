@@ -20,7 +20,7 @@ const Fundsform = () => {
     return (
         <div className="funds">
             <form className="fundsform" onSubmit={handleSubmit}>
-                <h1>APPLY!!</h1>
+                <h1 id="apply">APPLY!!</h1>
                 <label class="first">Firstname </label>
                 <input class="namebox" placeholder="firstname" value={firstname} onChange={(e) => setFirstname(e.target.value)} />
                 <label class="last">Lastname</label>
@@ -68,7 +68,7 @@ const Fundsform = () => {
                 </select><br></br>
                 <label class="lbl">Idea of the Startup</label><br></br>
                 <textarea rows="4" cols="83" onChange={(e) => setIdea(e.target.value)} /><br></br>
-                <button class="b" type="submit">S U B M I T </button >
+                <button class="submit" type="submit">S U B M I T </button >
 
             </form>
 

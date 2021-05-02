@@ -12,7 +12,7 @@
 
 }
 
-h1{
+#apply{
     padding-top:50px;
     padding-bottom:50px;
     padding-left:200px;
@@ -53,11 +53,11 @@ h1{
     padding-bottom: 100px;
     color:#C5C6C7;
 }
-.b{
+#submit{
     width:150px;
     height: 35px;
     margin-top: 10px ;
-    align:center;
+    box-align:center;
     background-color: transparent;
     color:white;
     border-color: #66FCF1;
