@@ -8,7 +8,7 @@ const JobDetails = ({ job, addTag }) => {
     <div className='module'>
       <div className='description'>
         <div>
-          <img src={job.logo} alt={job.position} />
+          <img src={job.logo} alt={job.company} />
         </div>
         <div>
           <ul>

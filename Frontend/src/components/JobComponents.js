@@ -3,6 +3,7 @@ import './JobComponents.css';
 import data from './database/data.json';
 
 
+
 import JobDetails from './JobDetails';
 
 function JobComponents() {
