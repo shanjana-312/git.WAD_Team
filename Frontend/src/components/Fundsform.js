@@ -68,7 +68,7 @@ const Fundsform = () => {
                 </select><br></br>
                 <label class="lbl">Idea of the Startup</label><br></br>
                 <textarea rows="4" cols="83" onChange={(e) => setIdea(e.target.value)} /><br></br>
-                <button class="submit" type="submit">S U B M I T </button >
+                <button class="b1" type="submit">S U B M I T </button >
 
             </form>
 
