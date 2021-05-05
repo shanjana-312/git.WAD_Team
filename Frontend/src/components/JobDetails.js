@@ -1,5 +1,8 @@
 import React from 'react';
-
+function showAlert() {
+    alert("APPLIED SUCCESSFULLY!!");
+    document.getElementsByClassName('apply').innerHTML = 'APPLIED';
+}
 const JobDetails = ({ job, addTag }) => {
   const tags = [...job.languages, ...job.tools, job.level, job.role];
   //   console.log(tags);
@@ -34,7 +37,10 @@ const JobDetails = ({ job, addTag }) => {
           </li>
         ))}
       </ul>
+      <div>
+    <button className='apply' type="submit"  onClick={showAlert}>APPLY</button></div>
     </div>
+
   );
 };
 

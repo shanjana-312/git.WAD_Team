@@ -19,8 +19,9 @@ const Fundsform = () => {
     }
     return (
         <div className="funds">
+
             <form className="fundsform" onSubmit={handleSubmit}>
-                <h1 id="apply">APPLY!!</h1>
+                <h1 id="Apply">APPLY!!</h1>
                 <label class="first">Firstname </label>
                 <input class="namebox" placeholder="firstname" value={firstname} onChange={(e) => setFirstname(e.target.value)} />
                 <label class="last">Lastname</label>
@@ -77,3 +78,12 @@ const Fundsform = () => {
 
 }
 export default Fundsform;
+
+
+
+
+
+
+
+
+

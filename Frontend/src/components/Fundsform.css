@@ -1,5 +1,6 @@
 .funds{
     padding-bottom:10% ;
+
     align-content: center;
     padding-left: 250px;
     padding-right: 250px;
@@ -9,17 +10,11 @@
 }
 .fundsform{
     padding-left:200px;
+    border:none;
 
 }
 
-#apply{
-    padding-top:50px;
-    padding-bottom:50px;
-    padding-left:200px;
-    color:#66FCF1;
 
-
-}
 .box{
     width: 600px;
     height: 35px;
@@ -61,6 +56,12 @@
     background-color: transparent;
     color:white;
     border-color: #66FCF1;
+}
+
+h1{
+    padding-left:200px;
+    color:#66fcf1;
+    padding-bottom:60px;
 }
 
 

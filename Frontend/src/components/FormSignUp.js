@@ -40,6 +40,7 @@ function FormSignUp() {
             history.push('/')
             alert("Thanks! Your account has been successfully created");
             document.getElementById('btn2').innerHTML = name;
+
         }
     }, [name])
 
