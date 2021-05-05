@@ -1,11 +1,11 @@
 import React from 'react';
-function showAlert() {
-    alert("APPLIED SUCCESSFULLY!!");
-    document.getElementsByClassName('apply').innerHTML = 'APPLIED';
-}
 const JobDetails = ({ job, addTag }) => {
   const tags = [...job.languages, ...job.tools, job.level, job.role];
   //   console.log(tags);
+  function showAlert() {
+    document.getElementById('apply').innerHTML = 'APPLIED';
+    alert("APPLIED SUCCESSFULLY!!");
+  }
 
   return (
     <div className='module'>
@@ -38,7 +38,7 @@ const JobDetails = ({ job, addTag }) => {
         ))}
       </ul>
       <div>
-    <button className='apply' type="submit"  onClick={showAlert}>APPLY</button></div>
+        <button id='apply' type="submit" onClick={showAlert}>APPLY</button></div>
     </div>
 
   );

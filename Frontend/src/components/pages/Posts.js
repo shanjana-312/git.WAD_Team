@@ -1,12 +1,13 @@
 import React from 'react'
-import FetchData from '../FetchData'
+import Postcomponent from '../Postcomponent'
+import Postscard from '../Postscard'
 
 function Posts() {
     return (
-        <div className="posts">
-            Posts
-            <FetchData />
-        </div>
+        <>
+            <Postcomponent />
+
+        </>
     )
 }
 

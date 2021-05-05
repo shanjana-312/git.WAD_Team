@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom'
 import Button2 from './Button2.js'
 function FormLogin({ submitform }) {
     const { handleChange, values, handleSubmit, errors } = useForm(submitform, Validate);
-    const { username, email, password, password2, } = values;
+    const { username, email, password, password2} = values;
     const [token, setToken, removeToken] = useCookies(['mytoken']);
     const [isLogin, setLogin] = useState(true);
     let history = useHistory()
