@@ -2,31 +2,51 @@
   margin: 0;
   padding: 0;
 }
-.rating-css {
-  height: 300px;
-  width: 600px;
+.Experience{
   background: #3aafa9;
-
-  padding: 120px;
-
+  padding-bottom:100px;
+    background-color: #3aafa9;
+    font-family: sans-serif;
 }
-.rating-css div {
+
+.para{
+  font-weight: bold;
+  padding-top: 30px;
+  text-align: center;
+  padding-left: 100px;
+  padding-bottom: 30px;
+  font-family: sans-serif;
+}
+.feed{
+  text-align: left;
+  
+  font-family: sans-serif;
+}
+.check{
+  padding-left:120px;
+}
+.rating-css {
+  height: 100px;
+  width: 1000px;
+  padding-left:100px;
+}
+.rating-css  .star-icon{
   color: #ffe400;
   font-size: 30px;
   font-family: sans-serif;
   font-weight: 800;
   text-align: center;
   text-transform: uppercase;
-
-
+  padding-top: 10px;
+  padding-left:300px;
 }
-.Module{
-    padding-bottom:130px;
-    padding-left: 470px;
-    background-color: #3aafa9;
 
-
-
+.rate{
+  font-size: 25px;
+  font-family: sans-serif;
+  padding-left: 300px;
+  font-family: sans-serif;
+  
 }
 
 .rating-css input {
@@ -36,6 +56,7 @@
   font-size: 60px;
   text-shadow: 1px 1px 0 #ffe400;
   cursor: pointer;
+  padding-right: 2%;
 }
 .rating-css input:checked + label ~ label {
   color: #838383;
@@ -46,26 +67,43 @@
 }
 
 .SubmiT{
-    padding-left:265px;
-    padding-top:100px;
+    padding-left: 40%;
+    padding-top:50px;
 }
 .submiT{
     height:50px;
-    width:100px;
+    width:200px;
     background-color:black;
     color:white;
     border:none;
+    font-size: 20px;
 
 }
 .Desc{
-    padding-top:50px;
-    padding-left:17px;
-
-}
-.para{
- color:#17252a;
+    padding-top:30px;
+    padding-left:400px;
+    font-family: sans-serif;
 }
 
 .desc{
     padding-bottom:30px;
+    font-size: 23px;
+    font-family: sans-serif;
+}
+
+.comment{
+  padding-right: 20px;
+  font-family: sans-serif;
+}
+.feedback{
+  padding-top:20px;
+  font-size: 20px;
+  padding-left: 400px;
+  padding-bottom: 50px;
+  font-family: sans-serif;
+}
+.ck{
+  width: 18px; 
+  height: 18px;
+  
 }

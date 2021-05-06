@@ -9,56 +9,64 @@ function Report() {
     <div className="reportdiv">
       <form className="form-report">
         <h1 className="reporth1">
-          <u>REPORT</u>
+          REPORT POST
         </h1>
         <div className="checkbox">
           <label htmlFor="User" className="username">
-            Username
-                    </label><br></br>
+            Post Title
+                    </label>
           <input id="User"
             type="text"
             name="User"
             className="User-input"
-            placeholder="Enter your username"
+            placeholder="Enter the title of the post"
 
           />
 
         </div>
-
         <div className="checkbox">
 
           <input type="checkbox" id="b1" name="b1" value="b1" />
-          <label> Hate Speech</label>
+          <label className="relbl"> Violent content</label>
         </div>
-
         <div className="checkbox">
 
           <input type="checkbox" id="b2" name="b2" value="b2" />
-          <label> Prank calls\mails</label>
+          <label className="relbl"> Abusive content</label>
+        </div>
+        <div className="checkbox">
+
+          <input type="checkbox" id="b3" name="b3" value="b3" />
+          <label className="relbl"> Harmful content</label>
         </div>
 
 
         <div className="checkbox">
 
-          <input type="checkbox" id="b3" name="b3" value="b3" />
-          <label> Nudity</label>
+          <input type="checkbox" id="b4" name="b4" value="b4" />
+          <label className="relbl"> Spam </label>
+        </div>
+
+
+        <div className="checkbox">
+
+          <input type="checkbox" id="b5" name="b5" value="b5" />
+          <label className="relbl"> Nudity</label>
         </div>
 
         <div className="checkbox">
           <label htmlFor="Description" className="desc">
-            Description
-                    </label><br></br>
+            Additional details about the content (Optional)
+                    </label>
           <textarea rows="6" cols="83" /><br></br>
-        </div>
-
-        <div className="Report">
-          <button id="Report" className="report" onClick={show}>Report</button>
         </div>
         <div className="instruction">
           <ul>
-            We will consider and try to solve your issue as soon as possible. <br></br>
-            If your issue is not solved within a week, please contact us.
+            Information about your report will be maintained in accordance with our Privacy Policy and Terms of Service.
           </ul>
+        </div>
+        <div className="Report">
+          <button id="Report" className="report" onClick={show}>Submit Report</button>
         </div>
       </form>
     </div>
