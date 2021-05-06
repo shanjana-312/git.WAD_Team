@@ -13,6 +13,7 @@ import Funds from './components/pages/Funds';
 import Footer from './components/Footer';
 import Report from './components/Report';
 import Experience from './components/Experience';
+import Contactus from './components/Contactus';
 
 import { CookiesProvider } from 'react-cookie'
 function App() {
@@ -32,6 +33,7 @@ function App() {
             <Route path="/funds" component={Funds} />
             <Route path="/report" component={Report}/>
             <Route path="/experience" component={Experience}/>
+            <Route path="/contactus" component={Contactus}/>
 
 
           </Switch>

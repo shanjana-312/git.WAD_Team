@@ -13,7 +13,7 @@ export const MenuItems2 = [
     ,
     {
         title: "Contact Us",
-        path: "/FindJobs",
+        path: "/contactus",
         cName: 'dropdown2-link'
     },
 
