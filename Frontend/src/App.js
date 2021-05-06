@@ -16,6 +16,7 @@ import Experience from './components/Experience';
 import Contactus from './components/Contactus';
 
 import { CookiesProvider } from 'react-cookie'
+import Faq from './components/Faq';
 function App() {
   return (
     <>
@@ -31,10 +32,10 @@ function App() {
             <Route path="/upload" component={Upload} />
             <Route path="/findjobs" component={FindJobs} />
             <Route path="/funds" component={Funds} />
-            <Route path="/report" component={Report}/>
-            <Route path="/experience" component={Experience}/>
-            <Route path="/contactus" component={Contactus}/>
-
+            <Route path="/report" component={Report} />
+            <Route path="/experience" component={Experience} />
+            <Route path="/contactus" component={Contactus} />
+            <Route path="/faq" component={Faq} />
 
           </Switch>
           <Footer />

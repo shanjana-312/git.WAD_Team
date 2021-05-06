@@ -55,7 +55,7 @@ function Report() {
         </div>
 
         <div className="checkbox">
-          <label htmlFor="Description" className="desc">
+          <label htmlFor="Description" className="desc1">
             Additional details about the content (Optional)
                     </label>
           <textarea rows="6" cols="83" /><br></br>
@@ -66,7 +66,7 @@ function Report() {
           </ul>
         </div>
         <div className="Report">
-          <button id="Report" className="report" onClick={show}>Submit Report</button>
+          <button id="Report" className="report" onClick={show}>Submit</button>
         </div>
       </form>
     </div>
