@@ -1,11 +1,18 @@
 import React from 'react';
+function showAlert() {
+    alert("APPLIED SUCCESSFULLY!!");
+    document.getElementById('apply').style.visibility = "hidden";
+    document.getElementById('applied').style.visibility = "visible";
+}
+
+function show() {
+    document.getElementById('apply').style.visibility = "visible";
+    document.getElementById('applied').style.visibility = "hidden";
+
+}
 const JobDetails = ({ job, addTag }) => {
   const tags = [...job.languages, ...job.tools, job.level, job.role];
   //   console.log(tags);
-  function showAlert() {
-    document.getElementById('apply').innerHTML = 'APPLIED';
-    alert("APPLIED SUCCESSFULLY!!");
-  }
 
   return (
     <div className='module'>
@@ -37,8 +44,10 @@ const JobDetails = ({ job, addTag }) => {
           </li>
         ))}
       </ul>
-      <div>
-        <button id='apply' type="submit" onClick={showAlert}>APPLY</button></div>
+      <ul><div>
+    <button className='apply' type="submit"  id = 'apply' onClick={showAlert}>APPLY</button></div><div>
+    <button className='applied' type="submit"  id = 'applied'  onClick={show}>UNDO</button></div>
+      </ul>
     </div>
 
   );

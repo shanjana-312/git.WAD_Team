@@ -1,5 +1,6 @@
 .place{
-    background-color: hsl(180, 58%, 58%);
+    background-color:hsl(180, 58%, 58%);
+
 }
 .searchpost{
     margin-left: 30%;
@@ -23,7 +24,7 @@ background-size: contain; */
 
 }
 .posts-cardcontainer{
-    background-color: rgb(255, 255, 255);
+    background-color:white;
     width: 500px;
     overflow: hidden;
     box-shadow: 0px 0px 10px -5px;
@@ -48,19 +49,24 @@ background-size: contain; */
     font-weight: 100;
     font-size: 30px;
     padding-bottom: 10px;
+    text-color:#5fa5a2;;
 }
 .posts-desc{
     margin: 20px 20px 0px 20px;
     font-weight: 100;
     font-size: 1rem;
     line-height: 1.5;
+    color:black;
+
 }
 .fa-thumbs-up{
     margin: 20px ;
     font-size: 1.5rem;
+    color:black;
 }
 .fa-thumbs-down{
     font-size: 1.5rem;
+    color:black;
 }
 .posts-comment{
     margin:0px 20px;

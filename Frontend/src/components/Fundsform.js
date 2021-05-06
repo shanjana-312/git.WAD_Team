@@ -18,9 +18,9 @@ const Fundsform = () => {
         setLoader(true);
     }
     return (
-        <div className="funds">
+        <div className="funds" >
 
-            <form className="fundsform" onSubmit={handleSubmit}>
+            <form className="fundsform" onSubmit={handleSubmit} >
                 <h1 id="Apply">APPLY!!</h1>
                 <label class="first">Firstname </label>
                 <input class="namebox" placeholder="firstname" value={firstname} onChange={(e) => setFirstname(e.target.value)} />

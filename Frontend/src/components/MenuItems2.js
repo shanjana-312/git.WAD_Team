@@ -7,7 +7,7 @@ export const MenuItems2 = [
     },
     {
         title: "Report",
-        path: "/",
+        path: "/report",
         cName: 'dropdown2-link'
     }
     ,

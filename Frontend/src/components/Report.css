@@ -1,0 +1,64 @@
+.form-report{
+     align : right;
+
+     padding-left:10px;
+     pading-right:100px;
+
+}
+
+
+
+h1{
+        padding-left:600px;
+        padding-bottom:50px;
+
+}
+
+.User-input{
+    width:200px;
+    height:40px;
+
+
+}
+.User-desc{
+        width:200px;
+        height:50px;
+
+}
+.username{
+    padding-right: 15px;
+    padding-bottom:15px;
+}
+.Report{
+
+    padding-left:800px;
+
+    padding-top: 100px;
+}
+.report{
+    background:transparent;
+     background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+
+
+}
+
+.div{
+    background-color: hsl(180, 58%, 58%);
+    padding-bottom : 150px;
+
+}
+
+.checkbox{
+    align:center;
+    padding-left:600px;
+    padding-bottom:10px;
+
+}

@@ -22,7 +22,7 @@ function Uploadposts() {
         <div className="formup-content-right">
             <form className="formup">
                 <h1>
-                    Add your post
+                Add your post
                 </h1>
                 <div className="formup-inputs">
                     <label htmlFor="Title" className="formup-label">

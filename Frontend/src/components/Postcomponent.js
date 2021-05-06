@@ -31,7 +31,7 @@ function Postcomponent() {
             .then(resp => setPosts(resp))
     }, [])
     return (
-        <div className="place">
+        <div className="place" >
             <input type="search" className="searchpost" placeholder="Search..." onChange={event => { setSearchTerm(event.target.value) }} />
             <div className="postscomp">
                 {posts.filter((post) => {

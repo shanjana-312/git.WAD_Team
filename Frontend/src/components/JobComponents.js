@@ -42,7 +42,7 @@ function JobComponents() {
   };
 
   return (
-    <div className='content'>
+    <div className='content' >
      
       {filters.length > 0 && (
         <ul className='tags-bar'>

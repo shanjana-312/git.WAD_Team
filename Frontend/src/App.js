@@ -11,6 +11,8 @@ import Upload from './components/pages/Upload';
 import FindJobs from './components/pages/FindJobs';
 import Funds from './components/pages/Funds';
 import Footer from './components/Footer';
+import Report from './components/Report';
+
 import { CookiesProvider } from 'react-cookie'
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
             <Route path="/upload" component={Upload} />
             <Route path="/findjobs" component={FindJobs} />
             <Route path="/funds" component={Funds} />
+            <Route path="/report" component={Report}/>
+
 
           </Switch>
           <Footer />
