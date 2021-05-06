@@ -89,7 +89,7 @@ function Navbar() {
                         </Link>{dropdown2 && <Dropdown2 />}
                     </li>
                     <li className='nav-item'>
-                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                        <Link to='/experience' className='nav-links' onClick={closeMobileMenu}>
                             <i className="fas fa-user-edit"></i> Experience
             </Link>
                     </li>
