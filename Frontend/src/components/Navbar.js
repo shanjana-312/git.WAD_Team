@@ -10,6 +10,7 @@ function Navbar() {
     const [dropdown1, setDropdown1] = useState(false);
     const [dropdown2, setDropdown2] = useState(false);
     const [input, setInput] = useState('');
+    // const [searchTerm, setSearchTerm] = useState("");
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
