@@ -23,15 +23,13 @@ const Fundsform = () => {
         FundData.append('role', role);
         FundData.append('members', members);
         FundData.append('idea', idea);
-        fetch("http://127.0.0.1:8000/admin/Frontend/fund/", {
+        fetch("http://127.0.0.1:8000/Frontend/funds/", {
             method: 'POST',
             body: FundData
+
         })
             .then(res => console.log(res))
             .catch(error => console.log(error))
-    }
-    const upFund = () => {
-        newFund()
     }
     return (
         <div className="funds" >
@@ -49,7 +47,7 @@ const Fundsform = () => {
                 <label class="lbl">Location</label><br></br>
                 <input class="box" placeholder="Location" value={location} onChange={(e) => setLocation(e.target.value)} /><br></br>
                 <label class="lbl">Startup stage</label><br></br>
-                <select class="box" onChange={(e) => setStage(e.target.value)}>
+                <select class="box" value={stage} onChange={(e) => setStage(e.target.value)}>
                     <option value="none" selected disabled hidden>Select</option>
                     <option value="Pre-Idea Stage">Pre-Idea Stage</option>
                     <option value="Idea Stage">Idea Stage</option>
@@ -57,7 +55,7 @@ const Fundsform = () => {
                     <option value="MVP/Early Market">MVP/Early Market</option>
                 </select><br></br>
                 <label class="lbl">Select Industry</label><br></br>
-                <select class="box" onChange={(e) => setIndustry(e.target.value)}>
+                <select class="box" value={industry} onChange={(e) => setIndustry(e.target.value)}>
                     <option value="none" selected disabled hidden>Select</option>
                     <option value="Information Technology">Information Technology</option>
                     <option value="Tourism">Tourism</option>
@@ -68,7 +66,7 @@ const Fundsform = () => {
                     <option value="others">others</option>
                 </select><br></br>
                 <label class="lbl">What is your Role?</label><br></br>
-                <select class="box" onChange={(e) => setRole(e.target.value)}>
+                <select class="box" value={role} onChange={(e) => setRole(e.target.value)}>
                     <option value="none" selected disabled hidden>Select</option>
                     <option value="Founder">Founder</option>
                     <option value="TeamLeader">Team Leader</option>
@@ -77,7 +75,7 @@ const Fundsform = () => {
                     <option value="other">other</option>
                 </select><br></br>
                 <label class="lbl">How many Team members?</label><br></br>
-                <select class="box" onChange={(e) => setMembers(e.target.value)}>
+                <select class="box" value={members} onChange={(e) => setMembers(e.target.value)}>
                     <option value="none" selected disabled hidden>Select</option>
                     <option value="Just me">Just me</option>
                     <option value="2 to 5 people">2 to 5 people</option>
@@ -86,7 +84,7 @@ const Fundsform = () => {
                 <label class="lbl">Idea of the Startup</label><br></br>
                 <textarea rows="5" cols="102" value={idea} onChange={(e) => setIdea(e.target.value)} /><br></br>
                 <center>
-                    <button class="b1" type="submit" onClick={upFund}>S U B M I T </button >
+                    <button class="b1" type="submit" onClick={() => newFund()}>S U B M I T </button >
                 </center>
 
             </form>

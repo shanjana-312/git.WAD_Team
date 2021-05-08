@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Post, Fund
-from .serializers import PostSerializer, UserSerializer, FundSerializer
+from .models import Post, Fund, Report
+from .serializers import PostSerializer, UserSerializer, FundSerializer, ReportSerializer
 # from django.http import JsonResponse
 # from rest_framework.parsers import JSONParser
 from rest_framework import viewsets
@@ -62,6 +62,23 @@ class FundViewSet(viewsets.ModelViewSet):
         Fund.objects.create(firstname=firstname, lastname=lastname, email=email, phonenumber=phonenumber,
                             location=location, stage=stage, industry=industry, role=role, members=members, idea=idea)
         return HttpResponse({'message': 'Funds Created'}, status=200)
+
+
+class ReportViewSet(viewsets.ModelViewSet):
+    queryset = Report.objects.all()
+    serializer_class = ReportSerializer
+
+    def report(self, request, *args, **kwargs):
+        posttitle = request.data['posttitle']
+        box1 = request.data['box1']
+        box2 = request.data['box2']
+        box3 = request.data['box3']
+        box4 = request.data['box4']
+        box5 = request.data['box5']
+        details = request.data['details']
+        Report.objects.create(posttitle=posttitle, box1=box1, box2=box2,
+                              box3=box3, box4=box4, box5=box5, details=details)
+        return HttpResponse({'message': 'Report Added'}, status=200)
 
 
 class UserViewSet(viewsets.ModelViewSet):

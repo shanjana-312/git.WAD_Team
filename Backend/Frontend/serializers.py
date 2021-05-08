@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Post, Fund
+from .models import Post, Fund, Report
 from django.contrib.auth.models import User
 from rest_framework.authtoken.views import Token
 # class PostSerializer(serializers.Serializer):
@@ -32,6 +32,13 @@ class FundSerializer(serializers.ModelSerializer):
         model = Fund
         fields = ['id', 'firstname', 'lastname', 'email', 'phonenumber',
                   'location', 'stage', 'industry', 'role', 'members', 'idea']
+
+
+class ReportSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Report
+        fields = ["id", "posttitle", "box1", "box2",
+                  "box3", "box4", "box5", "details"]
 
 
 class UserSerializer(serializers.ModelSerializer):
