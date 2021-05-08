@@ -5,7 +5,7 @@ function Faq() {
     const [faqs, setfaqs] = useState([
         {
             question: 'Why seek The Startup Club?',
-            answer: 'The Startups Club provides business assistance in many ways\: Financila assistance to set up or grow your business. We are capable to take a seat on your board of directors and play an active role in the day-to-day management of your business.Free mentorship in Business set-up, Development ,Network Support \: potential partners, suppliers, employees, etc.',
+            answer: 'The Startups Club provides business assistance in many ways\: Financial assistance to set up or grow your business. We are capable to take a seat on your board of directors and play an active role in the day-to-day management of your business.Free mentorship in Business set-up, Development ,Network Support \: potential partners, suppliers, employees, etc.',
             open: true
         },
         {

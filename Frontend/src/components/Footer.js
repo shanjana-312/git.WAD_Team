@@ -22,9 +22,9 @@ function Footer() {
           </div>
           <div class='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Help</Link>
-            <Link to='/'>FAQs</Link>
+            <Link to='/contactus'>Support</Link>
+            <Link to='/report'>Help</Link>
+            <Link to='/faq'>FAQs</Link>
 
           </div>
         </div>
