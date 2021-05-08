@@ -18,11 +18,12 @@ function Uploadposts() {
             .then(res => console.log(res))
             .catch(error => console.log(error))
     }
+    const uppost = () => { newPost() }
     return (
         <div className="formup-content-right">
             <form className="formup">
                 <h1>
-                Add your post
+                    Add your post
                 </h1>
                 <div className="formup-inputs">
                     <label htmlFor="Title" className="formup-label">
@@ -74,7 +75,7 @@ function Uploadposts() {
                         value={description} onChange={(e) => setDescription(e.target.value)}
                     />
                 </div>
-                <button className="formup-input-btn" type="submit" onClick={() => newPost()}>Create</button>
+                <button className="formup-input-btn" type="submit" onClick={uppost}>Create</button>
             </form>
         </div>
     );

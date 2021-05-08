@@ -6,21 +6,37 @@ const Fundsform = () => {
     const [email, setEmail] = useState("");
     const [phonenumber, setPhonenumber] = useState("");
     const [location, setLocation] = useState("");
-    const [stage, setStage] = useState("");
-    const [industry, setIndustry] = useState("");
-    const [role, setRole] = useState("");
-    const [members, setMembers] = useState("");
+    const [stage, setStage] = useState();
+    const [industry, setIndustry] = useState();
+    const [role, setRole] = useState();
+    const [members, setMembers] = useState();
     const [idea, setIdea] = useState("");
-
-    const [loader, setLoader] = useState(false);
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setLoader(true);
+    const newFund = () => {
+        const FundData = new FormData()
+        FundData.append('firstname', firstname);
+        FundData.append('lastname', lastname);
+        FundData.append('email', email);
+        FundData.append('phonenumber', phonenumber);
+        FundData.append('location', location);
+        FundData.append('stage', stage);
+        FundData.append('industry', industry);
+        FundData.append('role', role);
+        FundData.append('members', members);
+        FundData.append('idea', idea);
+        fetch("http://127.0.0.1:8000/admin/Frontend/fund/", {
+            method: 'POST',
+            body: FundData
+        })
+            .then(res => console.log(res))
+            .catch(error => console.log(error))
+    }
+    const upFund = () => {
+        newFund()
     }
     return (
         <div className="funds" >
 
-            <form className="fundsform" onSubmit={handleSubmit} >
+            <form className="fundsform"  >
                 <h1 id="Apply">APPLY!!</h1>
                 <label class="first">Firstname </label>
                 <input class="namebox" placeholder="firstname" value={firstname} onChange={(e) => setFirstname(e.target.value)} />
@@ -70,7 +86,7 @@ const Fundsform = () => {
                 <label class="lbl">Idea of the Startup</label><br></br>
                 <textarea rows="5" cols="102" value={idea} onChange={(e) => setIdea(e.target.value)} /><br></br>
                 <center>
-                    <button class="b1" type="submit" onClick={() => alert("successfully applied")}>S U B M I T </button >
+                    <button class="b1" type="submit" onClick={upFund}>S U B M I T </button >
                 </center>
 
             </form>
