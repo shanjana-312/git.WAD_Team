@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Post
+from .models import Post,Fund
 from django.contrib.auth.models import User
 from rest_framework.authtoken.views import Token
 # class PostSerializer(serializers.Serializer):
@@ -27,6 +27,12 @@ class PostSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'driveLink', 'description', 'upload']
 
 
+class FundSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Fund
+        fields = ['firstname','lastname','email','phonenumber','location','stage','industry','role','members','idea']
+
+
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -40,3 +46,5 @@ class UserSerializer(serializers.ModelSerializer):
         user = User.objects.create_user(**validated_data)
         Token.objects.create(user=user)
         return user
+
+
