@@ -9,8 +9,6 @@ function Navbar() {
     const [click, setClick] = useState(false);
     const [dropdown1, setDropdown1] = useState(false);
     const [dropdown2, setDropdown2] = useState(false);
-    const [input, setInput] = useState('');
-    // const [searchTerm, setSearchTerm] = useState("");
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
@@ -120,6 +118,7 @@ function Navbar() {
                 </form>
                 <div className="btn1"><Button2 /></div>
                 <div className="btn1"><Button3 /></div>
+                {/* {(document.getElementById('btn2').innerHTML !== name) ? <div><Button3 /></div> : <div><Logout /></div>} */}
             </nav>
         </>
     );

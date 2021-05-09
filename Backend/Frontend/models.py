@@ -3,6 +3,31 @@ from django.db import models
 # Create your models here.
 
 
+class Contactus(models.Model):
+    firstname = models.CharField(max_length=100)
+    lastname = models.CharField(max_length=100)
+    message = models.TextField(max_length=300)
+
+    def __str__(self):
+        return self.firstname
+
+
+class Experience(models.Model):
+    RATING = (("1", "1"),
+              ("2", "2"),
+              ("3", "3"),
+              ("4", "4"),
+              ("5", "5"),)
+    comment = models.BooleanField("Comments", default=False)
+    suggestions = models.BooleanField("Suggestions", default=False)
+    questions = models.BooleanField("Questions", default=False)
+    rate = models.CharField(max_length=1, choices=RATING, default="1")
+    remarks = models.TextField(max_length=300)
+
+    def __str__(self):
+        return self.remarks
+
+
 class Report(models.Model):
     posttitle = models.CharField(max_length=100)
     box1 = models.BooleanField("Violent content", default=False)

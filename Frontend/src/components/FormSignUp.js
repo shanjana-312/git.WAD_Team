@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react'
-// import useForm from './useForm'
-// import FormLogin from './FormLogin'
 import Validateinfo from './Validateinfo'
 import './Form.css'
 import { Link } from "react-router-dom"
 import APIService from '../APIService'
-import { useCookies } from 'react-cookie'
 import { useHistory } from 'react-router-dom'
 function FormSignUp() {
     // const { handleChange, values, handleSubmit, errors } = useForm(submitform, Validate);
@@ -31,8 +28,7 @@ function FormSignUp() {
         setIsSubmitting(true);
     }
 
-    // const [token, setToken] = useCookies(['mytoken']);
-    // const [isLogin, setLogin] = useState(true);
+
     const [name, setName] = useState(username);
     let history = useHistory()
     useEffect(() => {
@@ -40,15 +36,10 @@ function FormSignUp() {
             history.push('/')
             alert("Thanks! Your account has been successfully created");
             document.getElementById('btn2').innerHTML = name;
-
+            // document.getElementById('btn3').innerHTML = "Log Out";
         }
     }, [name])
 
-    // const LoginBtn = () => {
-    //     APIService.LoginUser({ username, password })
-    //         .then(resp => setToken('mytoken', resp.token))
-    //         .catch(error => console.log(error))
-    // }
     const RegisterBtn = () => {
         APIService.RegisterUser({ username, email, password })
             .then(resp => setName(values.username, resp.username))

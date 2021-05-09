@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Post, Fund, Report
-from .serializers import PostSerializer, UserSerializer, FundSerializer, ReportSerializer
+from .models import Post, Fund, Report, Experience, Contactus
+from .serializers import PostSerializer, UserSerializer, FundSerializer, ReportSerializer, ExperienceSerializer, ContactusSerializer
 # from django.http import JsonResponse
 # from rest_framework.parsers import JSONParser
 from rest_framework import viewsets
@@ -79,6 +79,34 @@ class ReportViewSet(viewsets.ModelViewSet):
         Report.objects.create(posttitle=posttitle, box1=box1, box2=box2,
                               box3=box3, box4=box4, box5=box5, details=details)
         return HttpResponse({'message': 'Report Added'}, status=200)
+
+
+class ExperienceViewSet(viewsets.ModelViewSet):
+    queryset = Experience.objects.all()
+    serializer_class = ExperienceSerializer
+
+    def experience(self, request, *args, **kwargs):
+        comment = request.data['comment']
+        suggestions = request.data['suggestions']
+        questions = request.data['questions']
+        rate = request.data['rate']
+        remarks = request.data['remarks']
+        Report.objects.create(comment=comment, suggestions=suggestions,
+                              questions=questions, rate=rate, remarks=remarks)
+        return HttpResponse({'message': 'Experience Added'}, status=200)
+
+
+class ContactusViewSet(viewsets.ModelViewSet):
+    queryset = Contactus.objects.all()
+    serializer_class = ContactusSerializer
+
+    def contactus(self, request, *args, **kwargs):
+        firstname = request.data['firstname']
+        lastname = request.data['lastname']
+        message = request.data['message']
+        Report.objects.create(firstname=firstname,
+                              lastname=lastname, message=message)
+        return HttpResponse({'message': 'Added'}, status=200)
 
 
 class UserViewSet(viewsets.ModelViewSet):

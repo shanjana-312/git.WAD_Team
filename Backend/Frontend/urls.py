@@ -6,6 +6,8 @@ router = DefaultRouter()
 router.register('posts', views.PostViewSet)
 router.register('funds', views.FundViewSet)
 router.register('reports', views.ReportViewSet)
+router.register('experiences', views.ExperienceViewSet)
+router.register('contactus', views.ContactusViewSet)
 router.register('users', views.UserViewSet)
 
 
